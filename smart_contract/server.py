@@ -16,8 +16,8 @@ def main():
     This is Smart contract running at {address}<br/><br/>
     
     The following methods are supported:<br/>
-    GET /item/<itemId><br/>
-    GET /item/<itemId>/bidder/<user><br/>
+    GET /item/&lt;itemId&gt;<br/>
+    GET /item/&lt;itemId&gt;/bidder/&lt;user&gt;<br/>
     POST /item <br/>
     POST /item/bidder<br/>
 """.format(address=SmartContract.CONTRACT_ADDR)
