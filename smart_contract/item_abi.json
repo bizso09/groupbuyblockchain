@@ -1,0 +1,114 @@
+[
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "itemId",
+				"type": "string"
+			},
+			{
+				"name": "link",
+				"type": "string"
+			},
+			{
+				"name": "description",
+				"type": "string"
+			},
+			{
+				"name": "price",
+				"type": "uint256"
+			}
+		],
+		"name": "addItem",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "itemId",
+				"type": "string"
+			}
+		],
+		"name": "getItem",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "itemId",
+				"type": "string"
+			},
+			{
+				"name": "user",
+				"type": "string"
+			}
+		],
+		"name": "getBidder",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "itemId",
+				"type": "string"
+			},
+			{
+				"name": "user",
+				"type": "string"
+			},
+			{
+				"name": "postal",
+				"type": "string"
+			},
+			{
+				"name": "quantity",
+				"type": "uint256"
+			}
+		],
+		"name": "addBidder",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	}
+]
