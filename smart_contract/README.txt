@@ -9,8 +9,6 @@ http://127.0.0.1:5000/
 
 This is Smart contract running at 0xe5f38f5bb4f02066f07be61603953d49de42ce2f
 
-This is Smart contract running at 0xe5f38f5bb4f02066f07be61603953d49de42ce2f
-
 The following methods are supported:
 GET /item/<itemId>
 GET /item/<itemId>/bidder/<user>

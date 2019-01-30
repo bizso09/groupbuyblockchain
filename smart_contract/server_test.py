@@ -9,7 +9,7 @@ import requests
 
 class ServerTest(unittest.TestCase):
 
-    HOST = "http://2.26.170.162:5000/"
+    HOST = "http://127.0.0.1:5000/"
 
     ITEM = "item2"
     USER = "meow"
