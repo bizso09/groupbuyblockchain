@@ -1,5 +1,6 @@
 smart_contract/__pycache__/
 smart_contract/venv/
+.idea/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

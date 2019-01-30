@@ -44,8 +44,8 @@ export default {
       if (this.currentPledges >= this.target) {
         var bodyFormData = new FormData();
         bodyFormData.set('itemId', 100);
-        bodyFormData.set('postal', "{{message}}");
-        bodyFormData.set('user', "Jordan Burgess");
+        bodyFormData.set('postal', this.message);
+        bodyFormData.set('user', "jordan");
         bodyFormData.set('quantity', 1);
         
         axios({
