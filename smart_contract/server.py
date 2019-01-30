@@ -33,6 +33,7 @@ def main():
 
 @app.route('/item', methods=['POST'])
 def add_item():
+    print(request.form)
     itemId = request.form['itemId']
     link = request.form['link']
     description = request.form['description']
