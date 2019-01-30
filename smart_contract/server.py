@@ -25,7 +25,9 @@ def main():
     GET /item/&lt;itemId&gt;<br/>
     GET /item/&lt;itemId&gt;/bidder/&lt;user&gt;<br/>
     POST /item <br/>
+      params: itemId (str), link (str), description (str), price (int) </br>
     POST /item/bidder<br/>
+      params: itemId (str), user (str), postal (str), quantity (int) </br>
 """.format(address=SmartContract.CONTRACT_ADDR)
 
 
