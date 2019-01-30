@@ -1,8 +1,11 @@
 
 <template>
   <div>
+    <br>
+    <br>
+    <br>
+    <p>Your address:</p>
     <input v-model="message" placeholder="edit me">
-    <p>Message is: {{ message }}</p>
     <button v-on:click="pledge">{{title}}</button>
     <div class="progress">
       <div
@@ -30,7 +33,10 @@ export default {
       type: Number,
       default: 0
     },
-    message: String
+    message: {
+      type: String,
+      default: "10 Bucket St",
+    }
   },
   methods: {
     pledge: function(event) {
@@ -38,13 +44,13 @@ export default {
       if (this.currentPledges >= this.target) {
         var bodyFormData = new FormData();
         bodyFormData.set('itemId', 100);
-        bodyFormData.set('link', "http://localhost:8080/");
-        bodyFormData.set('description', "Single speed bike in red");
-        bodyFormData.set('price', 80);
+        bodyFormData.set('postal', "{{message}}");
+        bodyFormData.set('user', "Jordan Burgess");
+        bodyFormData.set('quantity', 1);
         
         axios({
           method: "post",
-          url: "http://127.0.0.1:5000/item",
+          url: "http://127.0.0.1:5000/item/bidder",
           data: bodyFormData,
           config: { headers: { "Content-Type": "multipart/form-data" } }
         })

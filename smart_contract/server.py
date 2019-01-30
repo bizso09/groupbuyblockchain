@@ -46,6 +46,7 @@ def add_item():
 
 @app.route('/item/bidder', methods=['POST'])
 def add_bidder():
+    print(request.form)
     itemId = request.form['itemId']
     user = request.form['user']
     postal = request.form['postal']
