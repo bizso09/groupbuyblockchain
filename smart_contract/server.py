@@ -4,11 +4,17 @@ Created on 16 Jan 2019
 @author: Zsolt
 '''
 
-from flask import Flask
-from smart import SmartContract
-from flask.globals import request
 import json
+
+from flask import Flask
+from flask.globals import request
+from flask_cors import CORS
+
+from smart import SmartContract
+
 app = Flask(__name__)
+CORS(app)
+
 
 @app.route('/')
 def main():
@@ -22,16 +28,18 @@ def main():
     POST /item/bidder<br/>
 """.format(address=SmartContract.CONTRACT_ADDR)
 
+
 @app.route('/item', methods=['POST'])
 def add_item():
     itemId = request.form['itemId']
     link = request.form['link']
     description = request.form['description']
     price = int(request.form["price"])
-    
+
     contract = SmartContract()
     contract.add_item(itemId, link, description, price)
     return "success"
+
 
 @app.route('/item/bidder', methods=['POST'])
 def add_bidder():
@@ -39,7 +47,7 @@ def add_bidder():
     user = request.form['user']
     postal = request.form['postal']
     quantity = int(request.form["quantity"])
-    
+
     contract = SmartContract()
     contract.add_bidder(itemId, user, postal, quantity)
     return "success"
@@ -49,9 +57,9 @@ def add_bidder():
 def get_item(itemId):
     contract = SmartContract()
     return json.dumps(contract.get_item(itemId))
-    
+
+
 @app.route('/item/<itemId>/bidder/<user>')
 def get_bidder(itemId, user):
     contract = SmartContract()
     return json.dumps(contract.get_bidder(itemId, user))
-    
