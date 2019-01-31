@@ -18,6 +18,7 @@
       ></div>
     </div>
     <span>{{currentPledges}} out of a target of {{target}}.</span>
+
   </div>
 </template>
 
@@ -35,7 +36,7 @@ export default {
     },
     message: {
       type: String,
-      default: "10 Bucket St",
+      default: "10 Bucket St, Cambridge",
     }
   },
   methods: {
