@@ -1,16 +1,37 @@
 <template>
-  <article class="listing row">
-    <div class="col-9">
-      <h2>{{ title }}</h2>
-      <button v-on:click="addItem">Create smart contract</button>
-      <span>Currently live: {{live}}</span>
-      <img alt="Product image" src="../assets/Fixed-Gear-Bike-Track-6-Matte-Red.jpg" width="100%">
+  <!-- welcome section -->
+  <section class="xs-screen-height xs-welcome-section xs-bg fundpress-welcome-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="xs-welcome-content fundpress-welcome-content">
+            <div class="xs-welcome-wraper fundpress-welcome-wraper">
+              <div class="xs-welcome-title fundpress-welcome-title">
+                <h2 class="color-navy-blue">{{title}}</h2>
+              </div>
+              <span>Currently live: {{live}}</span>
+              <Pledge title="Commit to buying" target="20"/>
+              <div class="xs-btn-wraper">
+                <a href="#" class="xs-btn round-btn navy-blue-btn icon-btn">
+                  <i class="fa fa-heart"></i>invest Now
+                </a>
+                <a href="#" class="xs-btn round-btn blue-btn icon-btn">
+                  <i class="fa fa-facebook"></i>Share Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="xs-welcome-content">
+            <div class="fundpress-animate text-center">
+              <img src="images/Fixed-Gear-Bike-Track-6-Matte-Red.jpg" alt>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-3" style="border:3px #999 solid;">
-      <span>Pledge to buy</span>
-      <Pledge title="Commit to buying" target="20"/>
-    </div>
-  </article>
+  </section>
 </template>
 
 <script>

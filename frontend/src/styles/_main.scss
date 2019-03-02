@@ -1,7 +1,6 @@
 // all var list
 @import'variable';
 
-
 // nav bar style default by Fundpress
 .fundpress-header-main-version {
 	position: absolute;
@@ -88,7 +87,6 @@
 		@include width(16.66667%);
 		position: relative;
 		.fundpress-logo-v1 {
-			@include background-color($color-white);
 			height: calc(100% + 27px);
 			display: inline-flex;
 			justify-content: center;
@@ -96,11 +94,10 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			box-shadow: $hover-shadow;
 			width: 100%;
-			min-height: 135px;
+			min-height: 100px;
 			min-width: 185px;
-			max-height: 150px;
+			max-height: 110px;
 			max-width: 200px;
 		}
 	}

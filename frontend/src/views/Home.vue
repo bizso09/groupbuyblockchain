@@ -1,58 +1,9 @@
 <template>
 
   <div class="home">
-
-    <main class="xs-all-content-wrapper">
-      <!-- welcome section -->
-      <section
-        class="xs-screen-height xs-welcome-section xs-bg fundpress-welcome-section"
-      >
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="xs-welcome-content fundpress-welcome-content">
-                <div class="xs-welcome-wraper fundpress-welcome-wraper">
-                  <div class="xs-welcome-title fundpress-welcome-title">
-                    <h2 class="color-navy-blue">Exclusive Single Speed Bike</h2>
-                  </div>
-                  <div class="xs-skill-bar-v2" data-percent="65%">
-                    <div class="xs-skill-track">
-                      <p><span class="number-percentage-count">65</span>%</p>
-                    </div>
-                  </div>
-                  <ul
-                    class="xs-list-with-content fundpress-welcome-list-content"
-                  >
-                    <li class='price'>$90 <span>Delivered</span></li>
-                    <li>100 People<span>Goal</span></li>
-                  </ul>
-                  <div class="xs-btn-wraper">
-                    <a href="#" class="xs-btn round-btn navy-blue-btn icon-btn"
-                      ><i class="fa fa-heart"></i>invest Now</a
-                    >
-                    <a href="#" class="xs-btn round-btn blue-btn icon-btn"
-                      ><i class="fa fa-facebook"></i>Share Now</a
-                    >
-                  </div>
-                </div>
-                <!-- .xs-welcome-wraper .fundpress-welcome-wraper END -->
-              </div>
-              <!-- .xs-welcome-content .fundpress-welcome-content END -->
-            </div>
-            <div class="col-lg-6">
-              <div class="xs-welcome-content">
-                <div class="fundpress-animate text-center">
-                  <img src="images/Fixed-Gear-Bike-Track-6-Matte-Red.jpg" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End welcome section -->
-
- 
-
+    
+    <Listing title="Exclusive Single Speed Bike" img="@/assets/Fixed-Gear-Bike-Track-6-Matte-Red.jpg"/>
+      
       <!-- popular campaigns -->
       <section
         id="popular-campaigns"
@@ -261,14 +212,7 @@
         </div>
       </section>
       <!-- End popular campaigns -->
-    <!-- <div class="row">
-      <div class="col-sm">
-        <h1>Clubtain</h1>
-        <p>Welcome to Clubtain – where you club together to obtain the best prices on goods and services.</p>
-      </div>
-    </div>
-    <Listing title="Buy this bike" img="@/assets/Fixed-Gear-Bike-Track-6-Matte-Red.jpg"/> -->
-    </main>
+    
   </div>  
 </template>
 
@@ -282,8 +226,14 @@ export default {
   components: {
     Listing
   },
-  data: {
-    items: [{ message: "Foo" }, { message: "Bar" }]
+  css: {
+    loaderOptions: {
+      sass: {
+        data: `
+          @import "@/styles/style.scss";
+        `
+      }
+    }
   }
 };
 </script>

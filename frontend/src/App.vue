@@ -1,16 +1,14 @@
 <template>
   <div id="app" class="container">
-    <div id="nav" class="row">
-     <div class="col-sm">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-      </div>
-    </div>
+    <main class="xs-all-content-wrapper">
       <router-view/>
+    </main>
+
   </div>
 </template>
 
 <style>
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -30,4 +28,8 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+</style>
+
+<style lang="scss">
+@import "@/styles/style.scss";
 </style>
