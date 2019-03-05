@@ -5,7 +5,6 @@
 .xs-btn {
 	display: inline-block;
 	backface-visibility: hidden;
-	@extend .transition;
 	@include position(relative);
 	@extend .z-index-1;
 	line-height: 1;
@@ -21,7 +20,6 @@
 	padding: 16px 36px;
 	color: $color-white;
 	border: 0px solid transparent;
-	@extend .transition;
 	&.green-btn {
 		@include background-color($color-green);
 	}
@@ -63,37 +61,7 @@
 	}
 }
 
-.xs-btn {
-	&:before,
-	&:after {
-		content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		@extend .transition;
-		z-index: -1;
-	}
-	&:after {
-		left: -50px;
-		border-left: 0px solid transparent;
-		border-top: 100px solid $color-green;
-		transform: translateX(101%);
-	}
-	&:before {
-		right: -50px;
-		border-right: 00px solid transparent;
-		border-bottom: 100px solid $color-green;
-		transform: translateX(-101%);
-	}
-	&:hover:before {
-		transform: translateX(-48%);
-	}
-	&:hover:after {
-		transform: translateX(48%);
-	}
-}
+
 // hover effect for green btn
 .xs-btn {
 	&.green-btn {
@@ -110,6 +78,10 @@
 			transform: translateX(48%);
 		}
 	}
+}
+
+.logo-blue-btn {
+	background-color: $color-logo-blue;
 }
 
 .blue-btn {
@@ -337,42 +309,6 @@
 	}
 }
 
-
-
-@-webkit-keyframes menu-animation {
-	0% {
-		opacity: 0;
-		transform: scale(0.04) translateY(300%);
-	}
-	40% {
-		transform: scale(0.04) translateY(0);
-		transition: ease-out;
-	}
-	40% {
-		transform: scale(0.04) translateY(0);
-	}
-	60% {
-		opacity: 1;
-		transform: scale(0.02) translateY(0px);
-	}
-	61% {
-		opacity: 1;
-		transform: scale(0.04) translateY(0px);
-	}
-	99.9% {
-		opacity: 1;
-		height: 0;
-		padding-bottom: 100%;
-		border-radius: 100%;
-	}
-	100% {
-		opacity: 1;
-		transform: scale(2) translateY(0px);
-		height: 100%;
-		padding-bottom: 0;
-		border-radius: 0;
-	}
-}
 
 
 // bootstrap badge

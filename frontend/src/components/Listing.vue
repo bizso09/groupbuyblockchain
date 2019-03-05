@@ -1,4 +1,5 @@
 <template>
+
   <!-- welcome section -->
   <section class="xs-screen-height xs-welcome-section xs-bg fundpress-welcome-section">
     <div class="container">
@@ -7,10 +8,10 @@
           <div class="xs-welcome-content fundpress-welcome-content">
             <div class="xs-welcome-wraper fundpress-welcome-wraper">
               <div class="xs-welcome-title fundpress-welcome-title">
-                <h2 class="color-navy-blue">{{title}}</h2>
+                <h2 class="color-navy-blue">{{item.title}}</h2>
               </div>
               <span>Currently live: {{live}}</span>
-              <Pledge title="Commit to buying" target="20"/>
+              <Pledge title="Commit to buying" :target="item.requiredQuantity" :price="item.price"/>
               <div class="xs-btn-wraper">
                 <a href="#" class="xs-btn round-btn navy-blue-btn icon-btn">
                   <i class="fa fa-heart"></i>invest Now
@@ -25,7 +26,7 @@
         <div class="col-lg-6">
           <div class="xs-welcome-content">
             <div class="fundpress-animate text-center">
-              <img src="images/Fixed-Gear-Bike-Track-6-Matte-Red.jpg" alt>
+              <img :src="item.image" alt>
             </div>
           </div>
         </div>
@@ -42,7 +43,12 @@ export default {
   name: "Listing",
   props: {
     title: String,
-    img: String,
+    item: {
+      title: String,
+      image: String,
+      price: Number,
+      requiredQuantity: Number,
+    },
     live: {
       type: Boolean,
       default: false
