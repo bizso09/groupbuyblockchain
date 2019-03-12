@@ -1,9 +1,24 @@
 
 <template>
   <div>
-    <br>
-    <br>
-    <br>
+    <div class="xs-skill-bar-v2" :data-percent="'70%'">
+      <div class="xs-skill-track">
+        <p>
+          <span class="number-percentage-count">{{currentPledges/target*100}}</span>%
+        </p>
+      </div>
+    </div>
+    <ul class="xs-list-with-content fundpress-welcome-list-content">
+      <li class="price">
+        $90
+        <span>Delivered</span>
+      </li>
+      <li>
+        100 People
+        <span>Goal</span>
+      </li>
+    </ul>
+
     <p>Your address:</p>
     <input v-model="message" placeholder="edit me">
     <button v-on:click="pledge">{{title}}</button>
@@ -35,7 +50,7 @@ export default {
     },
     message: {
       type: String,
-      default: "10 Bucket St",
+      default: "10 Bucket St, Cambridge"
     }
   },
   methods: {
@@ -43,11 +58,11 @@ export default {
       this.currentPledges += 1;
       if (this.currentPledges >= this.target) {
         var bodyFormData = new FormData();
-        bodyFormData.set('itemId', 100);
-        bodyFormData.set('postal', this.message);
-        bodyFormData.set('user', "jordan");
-        bodyFormData.set('quantity', 1);
-        
+        bodyFormData.set("itemId", 100);
+        bodyFormData.set("postal", this.message);
+        bodyFormData.set("user", "jordan");
+        bodyFormData.set("quantity", 1);
+
         axios({
           method: "post",
           url: "http://127.0.0.1:5000/item/bidder",
