@@ -5,16 +5,17 @@ Created on 16 Jan 2019
 '''
 from web3.main import Web3
 import logging
+from os.path import dirname, join
 
 class SmartContract:
     
     PROVIDER = "https://ropsten.infura.io/v3/4efe6c8407424bfebbc531fdb8fb8540"
     
-    CONTRACT_FILE = "item.sol"
+    CONTRACT_FILE = join(dirname(__file__),"item.sol")
     CONTRACT_ADDR = "0xe5f38f5bb4f02066f07be61603953d49de42ce2f"
-    CONTRACT_ABI_FILE = "item_abi.json"
+    CONTRACT_ABI_FILE = join(dirname(__file__), "item_abi.json")
     
-    ACCOUNT_KEY = "account.key"
+    ACCOUNT_KEY = join(dirname(__file__), "account.key")
 
     def __init__(self):
         testnet_provider = Web3.HTTPProvider(self.PROVIDER)
