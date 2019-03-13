@@ -19,7 +19,7 @@ CORS(app)
 @app.route('/')
 def main():
     return """
-    This is Smart contract running at {address}<br/><br/>
+    This is Smart contract running at <a href="https://ropsten.etherscan.io/address/{address}">{address}</a><br/><br/>
     
     The following methods are supported:<br/>
     GET /item/&lt;itemId&gt;<br/>
